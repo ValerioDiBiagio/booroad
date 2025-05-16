@@ -3,6 +3,9 @@ import trips from "../data/trips";
 const Homepage = () => {
     return (
         <>
+            <header className="d-flex justify-content-between mb-3 align-items-center">
+                <h1 className="text-center mb-4">Lista Viaggi</h1>
+            </header>
             <div class="card">
                 <div class="card-header">
                     Featured

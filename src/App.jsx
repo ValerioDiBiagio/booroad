@@ -22,6 +22,7 @@ export default function App() {
                         <Route path='/' element={<Homepage />} />
                         <Route path='/journeys-detail/:id' element={<JourneyDetail />} />
                         <Route path='/journeys-members' element={<JourneyMembers />} />
+                        <Route path='/journeys-guides' element={<JourneyMembers />} />
                     </Route>
                     <Route path="*" element={<Error />} />
                 </Routes>

@@ -15,12 +15,12 @@ export default function JourneyDetail() {
           <div>
             <p>Data Inizio: {trip.startDate}</p>
             <p>Data Fine: {trip.endDate}</p>
-            <p>Guida: </p>
+            <p>Guida: <Link to={`/journey-guides/${trip.guide.id}`}>{trip.guide.name} {trip.guide.surname}</Link></p>
             <h3>Viaggiatori:</h3>
             <ul>
               {trip.travellers.map(traveller => (
                 <li key={traveller.id}>
-                  {traveller.name} {traveller.surname}
+                  <Link to={`/journey-members/${traveller.id}`}>{traveller.name} {traveller.surname}</Link>
                 </li>
               ))}
             </ul>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import trips from '../data/trips';
 
 export default function JourneyDetail() {
@@ -9,7 +9,26 @@ export default function JourneyDetail() {
 
   return (
     <>
-
+      {trip ? (
+        <>
+          <h1>Dettagli del Viaggio a {trip.destination}</h1>
+          <div>
+            <p>Data Inizio: {trip.startDate}</p>
+            <p>Data Fine: {trip.endDate}</p>
+            <p>Guida: </p>
+            <h3>Viaggiatori:</h3>
+            <ul>
+              {trip.travellers.map(traveller => (
+                <li key={traveller.id}>
+                  {traveller.name} {traveller.surname}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </>
+      ) : (
+        <p>Viaggio non trovato</p>
+      )}
     </>
   )
 };

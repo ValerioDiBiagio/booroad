@@ -1,30 +1,43 @@
+import { useState } from "react";
 import Jumbotron from "../components/Jumbotron";
 import trips from "../data/trips";
+import TripCard from "../components/TripCard";
 
 
 const Homepage = () => {
 
+    const [query, setQuery] = useState("");
+    const [searchTerm, setSearchTerm] = useState("");
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setSearchTerm(query);
+    };
+
+    const filteredTrips = trips.filter(trip =>
+        trip.destination.toLowerCase().includes(searchTerm.toLowerCase())
+    );
 
     return (
         <>
             <Jumbotron />
-            {trips.length ? trips.map((trip) => (
-                <div className="bg-warning-subtle container card mb-3 flex-row justify-content-around" key={trip.id}>
-                    <img className="w-25 m-3 rounded-2" src={trip.image} alt={trip.destination} />
-                    <div className="w-50">
-                        <h3 className="p-2 m-4 text-center"> <i className="p-2 fa-solid fa-plane-departure text-warning"></i> {trip.destination} <i className="p-2 fa-solid fa-plane-arrival text-warning"></i></h3>
-                        <p className="card-title text-center"> <strong>Guida:</strong> {trip.guide.name} {trip.guide.surname}</p>
-                        <p className="card-text text-center"> <strong>Data inizio:</strong> {trip.startDate} - <strong>Data fine:</strong> {trip.endDate}</p>
-                    </div>
-                    <div className="card-body d-flex align-items-center">
-                        <a href={`/journey-details/${trip.id}`} className="btn btn-warning text-black p-2 border-black">Dettagli del viaggio</a>
-                    </div>
-                </div>
-            )) : <div>trips were not found</div>}
-
-
-
-
+            <form onSubmit={handleSubmit} className="mb-4 d-flex justify-content-end align-items-center">
+                <input
+                    type="search"
+                    className="form-control w-25 me-2"
+                    id="search"
+                    value={query}
+                    onChange={(e) => setQuery(e.target.value)}
+                    placeholder="Cerca il tuo viaggio"
+                    aria-label="Search"
+                />
+                <button className="btn btn-outline-warning" type="submit">Cerca</button>
+            </form>
+            <ul className="list-unstyled d-flex flex-wrap gap-3">
+                {filteredTrips.map((trip, idx) => (
+                    <TripCard key={trip.id || idx} trip={trip} />
+                ))}
+            </ul>
         </>
     )
 };

@@ -6,11 +6,8 @@ const Header = () => {
             <div className="container d-flex justify-content-between align-items-center">
                 <a href="/journeys-detail" className="logo text-decoration-none text-light bg-success p-3 rounded-5 fs-5">Booroad</a>
                 <ul className="d-flex list-unstyled gap-3">
-                    {/* <li>
-                        <NavLink to='/'>Home Page</NavLink>
-                    </li> */}
                     <li>
-                        <NavLink to='/journeys-detail'>Viaggi</NavLink>
+                        <NavLink className="text-decoration-none" to='/journeys-detail'>Viaggi</NavLink>
                     </li>
                     <li>
                         <NavLink to='/journeys-members'>Viaggiatori</NavLink>

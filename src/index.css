@@ -1,6 +1,7 @@
-.jumbotron {
+.jumbotron{
     background-image: url(../src/public/booroad_bg.jpg);
     height: 17.5vh;
     background-size: cover;
-    background-repeat: no-repeat
-}
+    background-repeat: no-repeat;
+};
+

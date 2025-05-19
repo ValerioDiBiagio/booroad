@@ -22,7 +22,7 @@ export default function JourneyDetail() {
     <>
       {trip ? (
         <>
-          <div className='bg-warning-subtle'>
+          <div className='bg-warning-subtle p-4 rounded'>
             <h1>Dettagli del Viaggio a {trip.destination}:</h1>
             <div>
               <p><strong> <i className="p-2 fa-solid fa-plane-departure"></i> Data Inizio: </strong>{trip.startDate}</p>

@@ -31,7 +31,7 @@ const Homepage = () => {
                     placeholder="Cerca il tuo viaggio"
                     aria-label="Search"
                 />
-                <button className="btn btn-outline-warning" type="submit">Cerca</button>
+                <button className="btn btn-warning text-black p-2 border-black" type="submit">Cerca</button>
             </form>
             <ul className="list-unstyled d-flex flex-wrap gap-3">
                 {filteredTrips.map((trip, idx) => (

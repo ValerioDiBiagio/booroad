@@ -16,7 +16,7 @@ export default function JourneyDetail() {
             <div>
               <p><strong> <i className="p-2 fa-solid fa-plane-departure"></i> Data Inizio: </strong>{trip.startDate}</p>
               <p><strong> <i className="p-2 fa-solid fa-plane-arrival"></i> Data Fine: </strong>{trip.endDate}</p>
-              <p><strong>Guida: </strong><Link className="text-decoration-none" to={`/journey-guide-details/${trip.guide.id}`}>{trip.guide.name} {trip.guide.surname}</Link></p>
+              <p> <i className="fa-solid fa-user-tie"></i> <strong> Guida: </strong><Link className="text-decoration-none" to={`/journey-guide-details/${trip.guide.id}`}>{trip.guide.name} {trip.guide.surname}</Link></p>
             </div>
             <h2 className='mb-4'><strong>Viaggiatori: </strong></h2>
             <ul>
@@ -47,9 +47,9 @@ export default function JourneyDetail() {
                       >
                         <div className="accordion-body bg-warning-subtle">
                           <ul className='list-unstyled'>
-                            <li><strong><i class="fa-solid fa-phone"></i> Numero di telefono: </strong>{traveller.phone}</li>
+                            <li><strong><i className="fa-solid fa-phone"></i> Numero di telefono: </strong>{traveller.phone}</li>
                             <li><i class="fa-solid fa-envelope"></i> <strong>Email: </strong>{traveller.email}</li>
-                            <li><strong><i class="fa-solid fa-address-card"></i> Data di nascita: </strong>{traveller.birthday}</li>
+                            <li><strong><i className="fa-solid fa-address-card"></i> Data di nascita: </strong>{traveller.birthday}</li>
                           </ul>
                         </div>
                       </div>

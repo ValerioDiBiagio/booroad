@@ -9,3 +9,7 @@ body{
     background-repeat: no-repeat;
     border-radius: .5rem;
 }
+
+.height-header{
+    height: 16vh;
+}

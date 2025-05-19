@@ -7,7 +7,6 @@ const Homepage = () => {
 
     return (
         <>
-
             <Jumbotron />
             {trips.length ? trips.map((trip) => (
                 <div className="bg-warning-subtle container card mb-3 flex-row justify-content-around" key={trip.id}>

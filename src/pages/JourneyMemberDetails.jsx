@@ -9,12 +9,12 @@ export default function JourneyMemberDetails() {
     <>
       <div key={member.id} className="card mb-3">
         <div className="card-header">
-          <h2>{member.name} {member.surname}</h2>
+          <h2> {member.name} {member.surname}</h2>
         </div>
         <div className="card-body">
-          <p className="card-text">Codice Fiscale: {member.CF}</p>
+          <p className="card-text"> Codice Fiscale: {member.CF}</p>
           <p className="card-text">Numero di telefono: {member.phone}</p>
-          <p className="card-text">Email: {member.email}</p>
+          <p className="card-text"> Email: {member.email}</p>
         </div>
       </div>
     </>

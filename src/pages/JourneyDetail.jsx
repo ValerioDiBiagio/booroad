@@ -15,7 +15,7 @@ export default function JourneyDetail() {
           <div>
             <p><strong>Data Inizio: </strong>{trip.startDate}</p>
             <p><strong>Data Fine: </strong>{trip.endDate}</p>
-            <p><strong>Guida: </strong><Link to={`/journey-guide-details/${trip.guide.id}`}>{trip.guide.name} {trip.guide.surname}</Link></p>
+            <p><strong>Guida: </strong><Link className="text-decoration-none" to={`/journey-guide-details/${trip.guide.id}`}>{trip.guide.name} {trip.guide.surname}</Link></p>
             <h3 className='mb-4'><strong>Viaggiatori: </strong></h3>
             <ul>
               {trip.travellers.map((traveller) => {
@@ -45,9 +45,9 @@ export default function JourneyDetail() {
                       >
                         <div className="accordion-body">
                           <ul className='list-unstyled'>
-                            <li><strong>Numero di telefono: </strong>{traveller.phone}</li>
-                            <li><strong>Email: </strong>{traveller.email}</li>
-                            <li><strong>Data di nascita: </strong>{traveller.birthday}</li>
+                            <li><strong><i class="fa-solid fa-phone"></i> Numero di telefono: </strong>{traveller.phone}</li>
+                            <li><i class="fa-solid fa-envelope"></i> <strong>Email: </strong>{traveller.email}</li>
+                            <li><strong><i class="fa-solid fa-address-card"></i> Data di nascita: </strong>{traveller.birthday}</li>
                           </ul>
                         </div>
                       </div>

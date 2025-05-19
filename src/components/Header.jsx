@@ -9,10 +9,10 @@ const Header = () => {
                 </div>
                 <ul className="d-flex p-2 list-unstyled gap-3">
                     <li>
-                        <NavLink className="text-decoration-none text-black" to='/'>Viaggi</NavLink>
+                        <NavLink className="text-decoration-none text-black" to='/'><i class="fa-solid fa-earth-americas"></i> Viaggi</NavLink>
                     </li>
                     <li>
-                        <NavLink className="text-decoration-none text-black" to='/journeys-members'>Viaggiatori</NavLink>
+                        <NavLink className="text-decoration-none text-black" to='/journeys-members'><i class="fa-solid fa-user"></i> Viaggiatori</NavLink>
                     </li>
                 </ul>
             </div>

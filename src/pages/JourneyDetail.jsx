@@ -13,10 +13,10 @@ export default function JourneyDetail() {
         <>
           <h1>Dettagli del Viaggio a {trip.destination}</h1>
           <div>
-            <p>Data Inizio: {trip.startDate}</p>
-            <p>Data Fine: {trip.endDate}</p>
-            <p>Guida: <Link to={`/journey-guide-details/${trip.guide.id}`}>{trip.guide.name} {trip.guide.surname}</Link></p>
-            <h3>Viaggiatori:</h3>
+            <p><strong>Data Inizio: </strong>{trip.startDate}</p>
+            <p><strong>Data Fine: </strong>{trip.endDate}</p>
+            <p><strong>Guida: </strong><Link to={`/journey-guide-details/${trip.guide.id}`}>{trip.guide.name} {trip.guide.surname}</Link></p>
+            <h3><strong>Viaggiatori: </strong></h3>
             <ul>
               {trip.travellers.map((traveller) => {
                 const headingId = `heading-${traveller.id}`;
@@ -44,10 +44,10 @@ export default function JourneyDetail() {
                         data-bs-parent={`#${parentId}`}
                       >
                         <div className="accordion-body">
-                          <ul>
-                            <li>{traveller.phone}</li>
-                            <li>{traveller.email}</li>
-                            <li>{traveller.birthday}</li>
+                          <ul className='list-unstyled'>
+                            <li><strong>Numero di telefono: </strong>{traveller.phone}</li>
+                            <li><strong>Email: </strong>{traveller.email}</li>
+                            <li><strong>Data di nascita: </strong>{traveller.birthday}</li>
                           </ul>
                         </div>
                       </div>

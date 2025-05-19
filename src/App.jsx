@@ -21,7 +21,7 @@ export default function App() {
             <BrowserRouter>
                 <Routes>
                     <Route element={<DefaultLayout />}>
-                        <Route path='/journeys-detail' element={<Homepage />} />
+                        <Route path='/' element={<Homepage />} />
                         <Route path='/journey-details/:id' element={<JourneyDetail />} />
                         <Route path='/journeys-members' element={<JourneyMembers />} />
                         <Route path='/journey-member-details/:id' element={<JourneyMemberDetails />} />

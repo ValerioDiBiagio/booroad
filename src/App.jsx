@@ -5,7 +5,7 @@ import Homepage from './pages/Homepage';
 import JourneyDetail from './pages/JourneyDetail';
 import JourneyMembers from './pages/JourneyMembers';
 import Error from './components/Error';
-import GlobalContext from './contexts/globalContext';
+import GlobalContext from './contexts/GlobalContext';
 import JourneyMemberDetails from './pages/JourneyMemberDetails';
 import JourneyGuideDetails from './pages/JourneyGuideDetails';
 

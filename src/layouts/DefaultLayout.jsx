@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Loader from "../components/Loader";
 //utilities per il contesto
 import { useContext } from "react";
-import GlobalContext from "../contexts/globalContext";
+import GlobalContext from "../contexts/GlobalContext";
 
 const DefaultLayout = () => {
     const { isLoading } = useContext(GlobalContext)

@@ -1,6 +1,6 @@
 body{
     font-family: "Oswald", sans-serif;
-};
+}
 
 .jumbotron{
     background-image: url(../src/public/booroad_bg.jpg);
@@ -8,5 +8,4 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: .5rem;
-};
-
+}

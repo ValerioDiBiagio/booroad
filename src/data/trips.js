@@ -1,7 +1,7 @@
 const trips = [
   {
     id: 1,
-    destination: "Paris",
+    destination: "Parigi",
     image: "https://accademiabritannica.com/public/pacchetti/264-disneyland-experience-connubio-magico-di-cultura-svago-e-incanto-raCplLSf.jpg",
     startDate: "2025-06-10",
     endDate: "2025-06-15",
@@ -139,7 +139,7 @@ const trips = [
   },
   {
     id: 4,
-    destination: "Barcelona",
+    destination: "Barcellona",
     image: "https://www.barcellona.org/wp-content/uploads/sites/14/barcellona-sagrada-familia-lontano-hd.jpg",
     startDate: "2025-09-10",
     endDate: "2025-09-15",

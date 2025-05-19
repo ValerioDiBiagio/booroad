@@ -4,8 +4,11 @@ body{
 
 .jumbotron{
     background-image: url(../src/public/booroad_bg.jpg);
-    height: 200px;
+    height: 20vh;
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: .5rem;
+    position: relative;
+    top: 16vh;
+
 }

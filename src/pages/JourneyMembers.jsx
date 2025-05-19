@@ -6,7 +6,7 @@ const JourneyMembers = () => {
         <>
             {members.length ? (
                 members.map((member) => (
-                    <div className="card mb-3 bg-warning" key={member.id}>
+                    <div className="card mb-3 bg-warning shadow" key={member.id}>
                         <div className="card-header">
                             <h5 className="p-2"> <i class="fa-regular fa-user"></i> {member.name} {member.surname}</h5>
                         </div>

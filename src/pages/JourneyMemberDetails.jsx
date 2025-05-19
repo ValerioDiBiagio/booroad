@@ -7,7 +7,7 @@ export default function JourneyMemberDetails() {
 
   return (
     <>
-      <div key={member.id} className="card mb-3">
+      <div key={member.id} className="card mb-3 shadow">
         <div className="card-header">
           <h2> {member.name} {member.surname}</h2>
         </div>

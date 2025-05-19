@@ -185,7 +185,7 @@ const trips = [
   },
   {
     id: 5,
-    destination: "London",
+    destination: "Londra",
     image: "https://londra.io/wp-content/uploads/2021/10/Londra.jpg",
     startDate: "2025-10-05",
     endDate: "2025-10-10",

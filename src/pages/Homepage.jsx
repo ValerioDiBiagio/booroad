@@ -1,3 +1,4 @@
+import Jumbotron from "../components/Jumbotron";
 import trips from "../data/trips";
 
 
@@ -7,7 +8,7 @@ const Homepage = () => {
     return (
         <>
 
-
+            <Jumbotron />
             {trips.length ? trips.map((trip) => (
                 <div className="card mb-3" key={trip.id}>
                     <div className="card-header">

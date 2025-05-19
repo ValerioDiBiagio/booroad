@@ -20,7 +20,7 @@ export default function JourneyDetail() {
             <ul>
               {trip.travellers.map(traveller => (
                 <li key={traveller.id}>
-                  <Link to={`/journey-members/${traveller.id}`}>{traveller.name} {traveller.surname}</Link>
+                  <Link to={`/journey-member-details/${traveller.id}`}>{traveller.name} {traveller.surname}</Link>
                 </li>
               ))}
             </ul>

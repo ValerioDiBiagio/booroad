@@ -6,6 +6,7 @@ import JourneyDetail from './pages/JourneyDetail';
 import JourneyMembers from './pages/JourneyMembers';
 import Error from './components/Error';
 import GlobalContext from './contexts/globalContext';
+import JourneyMemberDetails from './pages/JourneyMemberDetails';
 
 export default function App() {
 
@@ -22,6 +23,7 @@ export default function App() {
                         <Route path='/' element={<Homepage />} />
                         <Route path='/journey-details/:id' element={<JourneyDetail />} />
                         <Route path='/journeys-members' element={<JourneyMembers />} />
+                        <Route path='/journey-member-details/:id' element={<JourneyMemberDetails />} />
                         <Route path='/journeys-guides' element={<JourneyMembers />} />
                     </Route>
                     <Route path="*" element={<Error />} />

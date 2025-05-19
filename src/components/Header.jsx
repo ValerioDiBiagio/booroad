@@ -7,12 +7,12 @@ const Header = () => {
                 <div className="logo border border-white rounded-5 bg-warning-subtle">
                     <a href="/"><img src="../src/public/logo_2.png" alt="logo" className="p-2" /></a>
                 </div>
-                <ul className="d-flex list-unstyled gap-3">
+                <ul className="d-flex p-2 list-unstyled gap-3">
                     <li>
-                        <NavLink to='/'>Viaggi</NavLink>
+                        <NavLink className="text-decoration-none text-black" to='/'>Viaggi</NavLink>
                     </li>
                     <li>
-                        <NavLink to='/journeys-members'>Viaggiatori</NavLink>
+                        <NavLink className="text-decoration-none text-black" to='/journeys-members'>Viaggiatori</NavLink>
                     </li>
                 </ul>
             </div>

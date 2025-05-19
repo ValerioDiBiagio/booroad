@@ -18,11 +18,43 @@ export default function JourneyDetail() {
             <p>Guida: <Link to={`/journey-guide-details/${trip.guide.id}`}>{trip.guide.name} {trip.guide.surname}</Link></p>
             <h3>Viaggiatori:</h3>
             <ul>
-              {trip.travellers.map(traveller => (
-                <li key={traveller.id}>
-                  <Link to={`/journey-member-details/${traveller.id}`}>{traveller.name} {traveller.surname}</Link>
-                </li>
-              ))}
+              {trip.travellers.map((traveller) => {
+                const headingId = `heading-${traveller.id}`;
+                const collapseId = `collapse-${traveller.id}`;
+                const parentId = `accordion-${traveller.id}`;
+                return (
+                  <div className="accordion mb-3" id={parentId} key={traveller.id}>
+                    <div className="accordion-item">
+                      <h2 className="accordion-header" id={headingId}>
+                        <button
+                          className="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target={`#${collapseId}`}
+                          aria-expanded="false"
+                          aria-controls={collapseId}
+                        >
+                          {traveller.name} {traveller.surname}
+                        </button>
+                      </h2>
+                      <div
+                        id={collapseId}
+                        className="accordion-collapse collapse"
+                        aria-labelledby={headingId}
+                        data-bs-parent={`#${parentId}`}
+                      >
+                        <div className="accordion-body">
+                          <ul>
+                            <li>{traveller.phone}</li>
+                            <li>{traveller.email}</li>
+                            <li>{traveller.birthday}</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
             </ul>
           </div>
         </>

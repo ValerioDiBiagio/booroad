@@ -1,7 +1,7 @@
 const Error = () => {
     return (
         <>
-            <div className="container bg-danger p-4 text-center">Pagina non trovata!</div>
+            <div className="container mt-4 bg-danger p-4 text-center">Pagina non trovata!</div>
         </>
     )
 };

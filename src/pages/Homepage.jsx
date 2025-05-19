@@ -9,14 +9,16 @@ const Homepage = () => {
 
 
             {trips.length ? trips.map((trip) => (
-                <div className="card mb-3" key={trip.id}>
-                    <div className="card-header">
-                        {trip.destination}
+                <div className="container card mb-3 flex-row justify-content-around" key={trip.id}>
+                    <img className="w-25" src={trip.image} alt={trip.destination} />
+                    <div className="w-50">
+                        <h3 className="p-2 m-4 text-center">{trip.destination}</h3>
+                        <p className="card-title text-center"> <strong>Guida:</strong> {trip.guide.name} {trip.guide.surname}</p>
+                        <p className="card-text text-center"> <strong>Data inizio:</strong> {trip.startDate} - <strong>Data fine:</strong> {trip.endDate}</p>
                     </div>
-                    <div className="card-body">
-                        <h5 className="card-title">With {trip.guide.name} {trip.guide.surname}</h5>
-                        <p className="card-text"> {trip.startDate} - {trip.endDate} </p>
-                        <a href={`/journey-details/${trip.id}`} className="btn btn-primary">See details</a>
+                    <div className="card-body d-flex align-items-center">
+
+                        <a href={`/journey-details/${trip.id}`} className="btn btn-primary ">Dettagli del viaggio</a>
                     </div>
                 </div>
             )) : <div>trips were not found</div>}

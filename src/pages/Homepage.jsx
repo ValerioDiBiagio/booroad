@@ -16,7 +16,7 @@ const Homepage = () => {
                     <div className="card-body">
                         <h5 className="card-title">With {trip.guide.name} {trip.guide.surname}</h5>
                         <p className="card-text"> {trip.startDate} - {trip.endDate} </p>
-                        <a href="#" className="btn btn-primary">See details</a>
+                        <a href={`/journey-details/${trip.id}`} className="btn btn-primary">See details</a>
                     </div>
                 </div>
             )) : <div>trips were not found</div>}

@@ -20,7 +20,7 @@ export default function App() {
                 <Routes>
                     <Route element={<DefaultLayout />}>
                         <Route path='/' element={<Homepage />} />
-                        <Route path='/journeys-detail/:id' element={<JourneyDetail />} />
+                        <Route path='/journey-details/:id' element={<JourneyDetail />} />
                         <Route path='/journeys-members' element={<JourneyMembers />} />
                         <Route path='/journeys-guides' element={<JourneyMembers />} />
                     </Route>

@@ -4,6 +4,7 @@ import trips from "../data/trips";
 import TripCard from "../components/TripCard";
 
 
+
 const Homepage = () => {
 
     const [query, setQuery] = useState("");

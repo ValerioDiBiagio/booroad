@@ -16,7 +16,7 @@ export default function JourneyDetail() {
             <p><strong>Data Inizio: </strong>{trip.startDate}</p>
             <p><strong>Data Fine: </strong>{trip.endDate}</p>
             <p><strong>Guida: </strong><Link to={`/journey-guide-details/${trip.guide.id}`}>{trip.guide.name} {trip.guide.surname}</Link></p>
-            <h3><strong>Viaggiatori: </strong></h3>
+            <h3 className='mb-4'><strong>Viaggiatori: </strong></h3>
             <ul>
               {trip.travellers.map((traveller) => {
                 const headingId = `heading-${traveller.id}`;
@@ -34,7 +34,7 @@ export default function JourneyDetail() {
                           aria-expanded="false"
                           aria-controls={collapseId}
                         >
-                          {traveller.name} {traveller.surname}
+                          <strong>{traveller.name} {traveller.surname}</strong>
                         </button>
                       </h2>
                       <div

@@ -6,7 +6,7 @@ const JourneyMembers = () => {
         <>
             {trips.map((trip) =>
                 trip.travellers.map((traveller) => (
-                    <div key={traveller.CF} className="card mb-3">
+                    <div key={traveller.id} className="card mb-3">
                         <div className="card-header">
                             <h2>{traveller.name} {traveller.surname}</h2>
                         </div>

@@ -1,23 +1,21 @@
-import trips from "../data/trips";
+import members from "../data/members";
 
 const JourneyMembers = () => {
 
     return (
         <>
-            {trips.map((trip) =>
-                trip.travellers.map((traveller) => (
-                    <div key={traveller.id} className="card mb-3">
-                        <div className="card-header">
-                            <h2>{traveller.name} {traveller.surname}</h2>
-                        </div>
-                        <div className="card-body">
-                            <p className="card-text">Codice Fiscale: {traveller.CF}</p>
-                            <p className="card-text">Numero di telefono: {traveller.phone}</p>
-                            <p className="card-text">Email: {traveller.email}</p>
-                        </div>
+            {members.map((member) => (
+                <div className="card mb-3" key={member.id}>
+                    <div className="card-header">
+                        <h5>{member.name} {member.surname}</h5>
                     </div>
-                ))
-            )}
+                    <div className="card-body">
+                        <p className="card-text">Email: {member.email} </p>
+                        <p className="card-text">Numero di Telefono: {member.phone} </p>
+                        <p className="card-text">Codice Fiscale: {member.CF} </p>
+                    </div>
+                </div>
+            ))}
         </>
     )
 };

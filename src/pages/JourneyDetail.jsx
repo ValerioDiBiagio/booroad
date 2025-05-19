@@ -16,7 +16,7 @@ export default function JourneyDetail() {
             <div>
               <p><strong> <i className="p-2 fa-solid fa-plane-departure"></i> Data Inizio: </strong>{trip.startDate}</p>
               <p><strong> <i className="p-2 fa-solid fa-plane-arrival"></i> Data Fine: </strong>{trip.endDate}</p>
-              <p><strong>Guida: </strong><Link className="text-decoration-none" to={`/journey-guide-details/${trip.guide.id}`}>{trip.guide.name} {trip.guide.surname}</Link></p>
+              <p><strong> <i class="fa-solid fa-user-tie"></i> Guida: </strong><Link className="text-decoration-none" to={`/journey-guide-details/${trip.guide.id}`}>{trip.guide.name} {trip.guide.surname}</Link></p>
             </div>
             <h2 className='mb-4'><strong>Viaggiatori: </strong></h2>
             <ul>

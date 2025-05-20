@@ -21,9 +21,9 @@ export default function JourneyDetail() {
       <div>
         <p><strong> <i className='p-2 fa-solid fa-plane-departure'></i> Data Inizio: </strong>{trip.startDate}</p>
         <p><strong> <i className='p-2 fa-solid fa-plane-arrival'></i> Data Fine: </strong>{trip.endDate}</p>
-        <p> <i className='fa-solid fa-user-tie'></i> <strong> Guida: </strong><Link className='text-decoration-none' to={`/guides/${trip.guide.id}`}>{trip.guide.name} {trip.guide.surname}</Link></p>
+        <p> <i className='fa-solid fa-user-tie ms-2 pe-3'></i> <strong> Guida: </strong><Link className=' text-decoration-none' to={`/guides/${trip.guide.id}`}>{trip.guide.name} {trip.guide.surname}</Link></p>
       </div>
-    </div>
+    </div >
   );
 
   const searchForm = (

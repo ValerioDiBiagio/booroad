@@ -27,7 +27,9 @@ export default function JourneyDetail() {
   );
 
   const searchForm = (
-    <form className='mb-4 d-flex justify-content-end align-items-center' onSubmit={e => e.preventDefault()}>
+    <form className='mt-3 mb-4 d-flex justify-content-between align-items-center' onSubmit={e => e.preventDefault()}>
+
+      <h2 className='mt-3 p-0'><strong> Viaggiatori: </strong></h2>
       <input
         type='search'
         className='form-control w-25 me-2'
@@ -35,12 +37,15 @@ export default function JourneyDetail() {
         value={search}
         onChange={e => setSearch(e.target.value)}
         aria-label='Search'
+
       />
+
+
     </form>
   );
 
   const travellersList = (
-    <ul>
+    <ul className='p-0' >
       {filteredTravellers.map((traveller) => {
         const headingId = `heading-${traveller.id}`;
         const collapseId = `collapse-${traveller.id}`;
@@ -67,7 +72,7 @@ export default function JourneyDetail() {
                 data-bs-parent={`#${parentId}`}
               >
                 <div className='accordion-body bg-warning-subtle'>
-                  <ul className='list-unstyled p-0'>
+                  <ul className='list-unstyled'>
                     <li><strong><i className='fa-solid fa-phone'></i> Numero di telefono: </strong>{traveller.phone}</li>
                     <li><i className='fa-solid fa-envelope'></i> <strong>Email: </strong>{traveller.email}</li>
                     <li><strong><i className='fa-solid fa-address-card'></i> Data di nascita: </strong>{traveller.birthday}</li>
@@ -89,7 +94,6 @@ export default function JourneyDetail() {
       {trip ? (
         <>
           {tripHeader}
-          <h2 className='p-4'><strong> Viaggiatori: </strong></h2>
           {searchForm}
           {travellersList}
         </>

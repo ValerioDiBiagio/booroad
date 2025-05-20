@@ -22,10 +22,12 @@
 
 - Frontend: React + Vite, dopo aver scaricato il file da GitHub, aprire il terminale da desktop ed eseguire le seguenti operazioni:
 
+Sposta il terminale nella cartella desiderata
 ```bash
-# Sposta il terminale nella cartella desiderata
 cd 'booroad'
-# Apre vscode nella cartella selezionata da terminale
+```
+Apre vscode nella cartella selezionata da terminale
+```bash
 code .
 ```
 

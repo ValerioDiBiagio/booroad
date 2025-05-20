@@ -24,7 +24,7 @@ Booroad è una web-app progettata per esplorare nuove destinazioni, creare itine
 
 Sposta il terminale nella cartella desiderata
 ```bash
-cd 'booroad'
+cd ./'booroad'
 ```
 Apri vscode nella cartella selezionata da terminale
 ```bash

@@ -44,12 +44,30 @@ export default function JourneyMembers() {
       <form className='mb-4 p-3 bg-warning-subtle rounded shadow' onSubmit={handleAddMember}>
         <h4 className='mb-3'>Aggiungi nuovo viaggiatore</h4>
         <div className='row g-2'>
-          <div className='col-md-2'><input name='name' value={newMember.name} onChange={handleInputChange} className='form-control' placeholder='Nome' required /></div>
-          <div className='col-md-2'><input name='surname' value={newMember.surname} onChange={handleInputChange} className='form-control' placeholder='Cognome' required /></div>
-          <div className='col-md-2'><input name='birthday' value={newMember.birthday} onChange={handleInputChange} className='form-control' placeholder='Data di nascita' type='date' /></div>
-          <div className='col-md-2'><input name='email' value={newMember.email} onChange={handleInputChange} className='form-control' placeholder='Email' type='email' /></div>
-          <div className='col-md-2'><input name='phone' value={newMember.phone} onChange={handleInputChange} className='form-control' placeholder='Telefono' /></div>
-          <div className='col-md-2'><input name='CF' value={newMember.CF} onChange={handleInputChange} className='form-control' placeholder='Codice Fiscale' /></div>
+          <div className='col-md-2'>
+            <label className='form-label'>Nome</label>
+            <input name='name' value={newMember.name} onChange={handleInputChange} className='form-control' placeholder='Nome' required />
+          </div>
+          <div className='col-md-2'>
+            <label className='form-label'>Cognome</label>
+            <input name='surname' value={newMember.surname} onChange={handleInputChange} className='form-control' placeholder='Cognome' required />
+          </div>
+          <div className='col-md-2'>
+            <label className='form-label'>Data di nascita</label>
+            <input name='birthday' value={newMember.birthday} onChange={handleInputChange} className='form-control' placeholder='Data di nascita' type='date' />
+          </div>
+          <div className='col-md-2'>
+            <label className='form-label'>Email</label>
+            <input name='email' value={newMember.email} onChange={handleInputChange} className='form-control' placeholder='Email' type='email' />
+          </div>
+          <div className='col-md-2'>
+            <label className='form-label'>Telefono</label>
+            <input name='phone' value={newMember.phone} onChange={handleInputChange} className='form-control' placeholder='Telefono' />
+          </div>
+          <div className='col-md-2'>
+            <label className='form-label'>Codice Fiscale</label>
+            <input name='CF' value={newMember.CF} onChange={handleInputChange} className='form-control' placeholder='Codice Fiscale' />
+          </div>
         </div>
         <button type='submit' className='btn btn-warning mt-3'>Aggiungi</button>
       </form>

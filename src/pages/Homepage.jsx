@@ -51,10 +51,20 @@ export default function Homepage() {
       <form className='mb-4 p-3 bg-warning-subtle rounded shadow' onSubmit={handleAddTrip} autoComplete='off'>
         <h4 className='mb-3'>Aggiungi nuovo viaggio</h4>
         <div className='row g-2'>
-          <div className='col-md-3'><input name='destination' value={newTrip.destination} onChange={handleInputChange} className='form-control' placeholder='Destinazione' required /></div>
-          <div className='col-md-2'><input name='startDate' value={newTrip.startDate} onChange={handleInputChange} className='form-control' placeholder='Data inizio' type='date' required /></div>
-          <div className='col-md-2'><input name='endDate' value={newTrip.endDate} onChange={handleInputChange} className='form-control' placeholder='Data fine' type='date' required /></div>
           <div className='col-md-3'>
+            <label className='form-label'>Destinazione</label>
+            <input name='destination' value={newTrip.destination} onChange={handleInputChange} className='form-control' placeholder='Destinazione' required />
+          </div>
+          <div className='col-md-2'>
+            <label className='form-label'>Data inizio</label>
+            <input name='startDate' value={newTrip.startDate} onChange={handleInputChange} className='form-control' placeholder='Data inizio' type='date' required />
+          </div>
+          <div className='col-md-2'>
+            <label className='form-label'>Data fine</label>
+            <input name='endDate' value={newTrip.endDate} onChange={handleInputChange} className='form-control' placeholder='Data fine' type='date' required />
+          </div>
+          <div className='col-md-3'>
+            <label className='form-label'>Guida</label>
             <select name='guideId' value={newTrip.guideId} onChange={handleInputChange} className='form-select' required>
               <option value=''>Seleziona guida...</option>
               {guides.map(g => (
@@ -62,7 +72,10 @@ export default function Homepage() {
               ))}
             </select>
           </div>
-          <div className='col-md-2'><input name='image' value={newTrip.image} onChange={handleInputChange} className='form-control' placeholder='URL immagine' /></div>
+          <div className='col-md-2'>
+            <label className='form-label'>URL immagine</label>
+            <input name='image' value={newTrip.image} onChange={handleInputChange} className='form-control' placeholder='URL immagine' />
+          </div>
         </div>
         <button type='submit' className='btn btn-warning mt-3'>Aggiungi viaggio</button>
       </form>

@@ -1,27 +1,33 @@
-import members from "../data/members";
+import members from '../data/members';
+import MemberCard from '../components/MemberCard';
+import { useState, useEffect } from 'react';
+import InstantSearchInput from '../components/InstantSearchInput';
+import Pagination from '../components/Pagination';
 
-const JourneyMembers = () => {
 
-    return (
-        <>
-            {members.length ? (
-                members.map((member) => (
-                    <div className="card mb-3 bg-warning shadow" key={member.id}>
-                        <div className="card-header">
-                            <h5 className="p-2"> <i class="fa-regular fa-user"></i> {member.name} {member.surname}</h5>
-                        </div>
-                        <div className="card-body bg-warning-subtle">
-                            <p className="card-text"> <i class="fa-solid fa-envelope"></i> <strong>Email: </strong>{member.email} </p>
-                            <p className="card-text"> <i class="fa-solid fa-phone"></i> <strong>Numero di Telefono: </strong>{member.phone} </p>
-                            <p className="card-text"> <i class="fa-solid fa-id-card"></i> <strong>Codice Fiscale: </strong>{member.CF} </p>
-                        </div>
-                    </div>
-                ))
-            ) : (
-                <div>members were not found</div>
-            )}
-        </>
-    )
+export default function JourneyMembers() {
+  const [search, setSearch] = useState('');
+  const [page, setPage] = useState(1);
+  const filteredMembers = members.filter(member =>
+    `${member.name} ${member.surname}`.toLowerCase().includes(search.toLowerCase())
+  );
+  const itemsPerPage = 10;
+  const totalPages = Math.ceil(filteredMembers.length / itemsPerPage);
+  const paginatedMembers = filteredMembers.slice((page - 1) * itemsPerPage, page * itemsPerPage);
+
+  useEffect(() => { setPage(1); }, [search]);
+
+  return (
+    <>
+      <InstantSearchInput value={search} onChange={setSearch} placeholder='Cerca viaggiatore' />
+      {paginatedMembers.length ? (
+        paginatedMembers.map((member) => (
+          <MemberCard key={member.id} member={member} />
+        ))
+      ) : (
+        <div>members were not found</div>
+      )}
+      <Pagination currentPage={page} totalPages={totalPages} onPageChange={setPage} />
+    </>
+  );
 };
-
-export default JourneyMembers;

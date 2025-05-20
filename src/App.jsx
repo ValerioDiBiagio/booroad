@@ -8,6 +8,7 @@ import Error from './components/Error';
 import GlobalContext from './contexts/GlobalContext';
 import JourneyMemberDetails from './pages/JourneyMemberDetails';
 import JourneyGuideDetails from './pages/JourneyGuideDetails';
+import Guides from './pages/Guides';
 
 export default function App() {
 
@@ -22,13 +23,14 @@ export default function App() {
                 <Routes>
                     <Route element={<DefaultLayout />}>
                         <Route path='/' element={<Homepage />} />
-                        <Route path='/journey-details/:id' element={<JourneyDetail />} />
-                        <Route path='/journeys-members' element={<JourneyMembers />} />
-                        <Route path='/journey-member-details/:id' element={<JourneyMemberDetails />} />
-                        <Route path='/journeys-guides' element={<JourneyMembers />} />
-                        <Route path='/journey-guide-details/:id' element={<JourneyGuideDetails />} />
+                        <Route path='/journeys' element={<Homepage />} />
+                        <Route path='/journeys/:id' element={<JourneyDetail />} />
+                        <Route path='/members' element={<JourneyMembers />} />
+                        <Route path='/members/:id' element={<JourneyMemberDetails />} />
+                        <Route path='/guides' element={<Guides />} />
+                        <Route path='/guides/:id' element={<JourneyGuideDetails />} />
                     </Route>
-                    <Route path="*" element={<Error />} />
+                    <Route path='*' element={<Error />} />
                 </Routes>
             </BrowserRouter>
         </GlobalContext.Provider>

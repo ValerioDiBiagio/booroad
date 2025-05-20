@@ -17,7 +17,7 @@ export default function JourneyDetail() {
 
   const tripHeader = (
     <div className='bg-warning-subtle p-4 rounded'>
-      <h1>Dettagli del Viaggio a {trip.destination}:</h1>
+      <h1 className='mb-3'>Dettagli del Viaggio a {trip.destination}:</h1>
       <div>
         <p><strong> <i className='p-2 fa-solid fa-plane-departure'></i> Data Inizio: </strong>{trip.startDate}</p>
         <p><strong> <i className='p-2 fa-solid fa-plane-arrival'></i> Data Fine: </strong>{trip.endDate}</p>
@@ -67,7 +67,7 @@ export default function JourneyDetail() {
                 data-bs-parent={`#${parentId}`}
               >
                 <div className='accordion-body bg-warning-subtle'>
-                  <ul className='list-unstyled'>
+                  <ul className='list-unstyled p-0'>
                     <li><strong><i className='fa-solid fa-phone'></i> Numero di telefono: </strong>{traveller.phone}</li>
                     <li><i className='fa-solid fa-envelope'></i> <strong>Email: </strong>{traveller.email}</li>
                     <li><strong><i className='fa-solid fa-address-card'></i> Data di nascita: </strong>{traveller.birthday}</li>
@@ -89,7 +89,7 @@ export default function JourneyDetail() {
       {trip ? (
         <>
           {tripHeader}
-          <h2 className='mb-4'><strong>Viaggiatori: </strong></h2>
+          <h2 className='p-4'><strong> Viaggiatori: </strong></h2>
           {searchForm}
           {travellersList}
         </>

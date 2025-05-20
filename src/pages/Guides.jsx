@@ -3,13 +3,13 @@ import { useState, useEffect } from 'react';
 import InstantSearchInput from '../components/InstantSearchInput';
 import Pagination from '../components/Pagination';
 import MemberCard from '../components/MemberCard';
+import Jumbotron from '../components/Jumbotron';
 
 export default function Guides() {
   const [search, setSearch] = useState('');
   const [page, setPage] = useState(1);
   const filteredGuides = guides.filter(guide =>
-    `${guide.name} ${guide.surname}`.toLowerCase().includes(search.toLowerCase())
-  );
+    `${guide.name} ${guide.surname}`.toLowerCase().includes(search.toLowerCase()));
   const itemsPerPage = 10;
   const totalPages = Math.ceil(filteredGuides.length / itemsPerPage);
   const paginatedGuides = filteredGuides.slice((page - 1) * itemsPerPage, page * itemsPerPage);
@@ -18,6 +18,7 @@ export default function Guides() {
 
   return (
     <>
+      <Jumbotron />
       <InstantSearchInput value={search} onChange={setSearch} title='Guide' placeholder='Cerca guida' />
       {paginatedGuides.length ? (
         paginatedGuides.map((guide) => (

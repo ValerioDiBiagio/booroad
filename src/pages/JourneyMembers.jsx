@@ -3,7 +3,7 @@ import MemberCard from '../components/MemberCard';
 import { useState, useEffect } from 'react';
 import InstantSearchInput from '../components/InstantSearchInput';
 import Pagination from '../components/Pagination';
-
+import Jumbotron from '../components/Jumbotron';
 
 export default function JourneyMembers() {
   const [search, setSearch] = useState('');
@@ -19,6 +19,7 @@ export default function JourneyMembers() {
 
   return (
     <>
+      <Jumbotron />
       <InstantSearchInput value={search} onChange={setSearch} title='Viaggiatori' placeholder='Cerca viaggiatore' />
       {paginatedMembers.length ? (
         paginatedMembers.map((member) => (

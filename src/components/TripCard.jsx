@@ -12,7 +12,7 @@ const TripCard = ({ trip }) => {
                 <p className='card-title text-center'> <strong>Guida:</strong> {trip.guide.name} {trip.guide.surname}</p>
                 <p className='card-text text-center'> <strong>Data inizio:</strong> {trip.startDate} - <strong>Data fine:</strong> {trip.endDate}</p>
             </div>
-            <div className='card-body d-flex align-items-center'>
+            <div className='card-body d-flex align-items-center rounded-bottom'>
                 <a href={`/journeys/${trip.id}`} className='btn btn-warning text-black p-2 border-black'>Dettagli del viaggio</a>
             </div>
         </div>

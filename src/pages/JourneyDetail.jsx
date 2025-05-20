@@ -72,7 +72,7 @@ export default function JourneyDetail() {
                 aria-labelledby={headingId}
                 data-bs-parent={`#${parentId}`}
               >
-                <div className='accordion-body bg-warning-subtle'>
+                <div className='accordion-body bg-warning-subtle rounded-bottom'>
                   <ul className='list-unstyled'>
                     <li><strong><i className='fa-solid fa-phone'></i> Numero di telefono: </strong>{traveller.phone}</li>
                     <li><i className='fa-solid fa-envelope'></i> <strong>Email: </strong>{traveller.email}</li>

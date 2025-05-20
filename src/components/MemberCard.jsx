@@ -20,7 +20,7 @@ export default function MemberCard({ member, showTrip }) {
       <div className='card-header'>
         <h5 className='p-2'> <i className='fa-regular fa-user'></i> {member.name} {member.surname}</h5>
       </div>
-      <div className='card-body bg-warning-subtle'>
+      <div className='card-body bg-warning-subtle rounded-bottom'>
         {tripInfo}
         <p className='card-text'> <i className='fa-solid fa-envelope'></i> <strong>Email: </strong>{member.email} </p>
         <p className='card-text'> <i className='fa-solid fa-phone'></i> <strong>Numero di Telefono: </strong>{member.phone} </p>

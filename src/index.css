@@ -40,3 +40,8 @@ body {
     --bs-pagination-active-border-color: #ffc107;
     --bs-pagination-disabled-bg: #edc245;
 }
+
+.logo-border{
+    border: 2px solid yellowgreen;
+    border-radius: 50%;
+}

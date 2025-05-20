@@ -73,7 +73,7 @@ export default function Homepage() {
             <TripCard key={trip.id} trip={trip} />
           ))}
         </ul>
-      ) : <div>trips were not found</div>}
+      ) : <div>Viaggi non trovati</div>}
       <Pagination currentPage={page} totalPages={totalPages} onPageChange={setPage} />
     </>
   );

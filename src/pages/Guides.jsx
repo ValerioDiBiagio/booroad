@@ -25,7 +25,7 @@ export default function Guides() {
           <MemberCard member={guide} showTrip={true} />
         ))
       ) : (
-        <div>guides were not found</div>
+        <div>Guide non trovate</div>
       )}
       <Pagination currentPage={page} totalPages={totalPages} onPageChange={setPage} />
     </>

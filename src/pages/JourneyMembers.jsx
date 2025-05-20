@@ -19,13 +19,13 @@ export default function JourneyMembers() {
 
   return (
     <>
-      <InstantSearchInput value={search} onChange={setSearch} placeholder='Cerca viaggiatore' />
+      <InstantSearchInput value={search} onChange={setSearch} title='Viaggiatori' placeholder='Cerca viaggiatore' />
       {paginatedMembers.length ? (
         paginatedMembers.map((member) => (
           <MemberCard key={member.id} member={member} showTrip={true} />
         ))
       ) : (
-        <div>members were not found</div>
+        <div>Membri non trovati</div>
       )}
       <Pagination currentPage={page} totalPages={totalPages} onPageChange={setPage} />
     </>

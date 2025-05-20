@@ -2,7 +2,7 @@
 
 > ## Descrizione del prodotto:
 
-- Booroad è una web-app progettata per esplorare nuove destinazioni, creare itinerari personalizzati e pianificare il tuo viaggio in modo semplice e veloce. L’app è costruita utilizzando Vite, uno strumento di sviluppo di ultimissima generazione pensato per progetti frontend moderni.
+Booroad è una web-app progettata per esplorare nuove destinazioni, creare itinerari personalizzati e pianificare il tuo viaggio in modo semplice e veloce. L’app è costruita utilizzando Vite, uno strumento di sviluppo di ultimissima generazione pensato per progetti frontend moderni.
 
 > ## Funzionalità
 
@@ -22,25 +22,26 @@
 
 - Frontend: React + Vite, dopo aver scaricato il file da GitHub, aprire il terminale da desktop ed eseguire le seguenti operazioni:
 
-```bash 
-
-    cd 'nome-cartella' (sposta il terminale nella cartella desiderata) 
-
-    code . (apre vscode nella cartella selezionata da terminale)
-
-```
-
- - aprire ora il terminale in vscode ed eseguire i seguenti comandi:
-
+Sposta il terminale nella cartella desiderata
 ```bash
-
-    npm i (installa le librerie necessarie al corretto funzionamento del programma)
-
-    npm run dev (attiva il server locale)
-    
-    aprire il link creato tramite 'Ctrl + click sinistro' (apre il programma nel browser)
-    
+cd ./'booroad'
 ```
+Apri vscode nella cartella selezionata da terminale
+```bash
+code .
+```
+
+Ora apri il terminale in vscode ed eseguire i seguenti comandi:
+
+Installa le librerie necessarie al corretto funzionamento del programma
+```bash
+    npm i 
+```
+Avvia il server locale
+```bash
+    npm run dev
+```
+Aprire il link creato tramite 'Ctrl + click sinistro' (apre il programma nel browser) 
 
 - Styling: Bootstrap + Font Awesome
 

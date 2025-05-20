@@ -22,7 +22,7 @@ export default function Homepage() {
   return (
     <>
       <Jumbotron />
-      <InstantSearchInput value={search} onChange={setSearch} placeholder='Cerca il tuo viaggio' />
+      <InstantSearchInput value={search} onChange={setSearch} title='Viaggi' placeholder='Cerca il tuo viaggio' />
       {paginatedTrips.length ? (
         <ul className='list-unstyled d-flex flex-wrap gap-3'>
           {paginatedTrips.map(trip => (

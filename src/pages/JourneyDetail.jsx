@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import trips from '../data/trips';
 import members from '../data/members';
+import InstantSearchInput from '../components/InstantSearchInput';
 
 export default function JourneyDetail() {
   const { id } = useParams();
@@ -94,7 +95,7 @@ export default function JourneyDetail() {
       {trip ? (
         <>
           {tripHeader}
-          {searchForm}
+          <InstantSearchInput value={search} onChange={setSearch} title='Viaggiatori' placeholder='Cerca viaggiatore' />
           {travellersList}
         </>
       ) : (

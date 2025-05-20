@@ -18,7 +18,7 @@ export default function Guides() {
 
   return (
     <>
-      <InstantSearchInput value={search} onChange={setSearch} placeholder='Cerca guida' />
+      <InstantSearchInput value={search} onChange={setSearch} title='Guide' placeholder='Cerca guida' />
       {paginatedGuides.length ? (
         paginatedGuides.map((guide) => (
           <MemberCard member={guide} showTrip={true} />

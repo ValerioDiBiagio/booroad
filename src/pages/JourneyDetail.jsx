@@ -7,14 +7,43 @@ import InstantSearchInput from '../components/InstantSearchInput';
 export default function JourneyDetail() {
   const { id } = useParams();
   const [search, setSearch] = useState('');
+  const [localMembers, setLocalMembers] = useState(members);
+  const [selectedMemberId, setSelectedMemberId] = useState('');
+  const [assignSearch, setAssignSearch] = useState('');
 
   const trip = trips.find(trip => trip.id === Number(id));
-  const tripMembers = members.filter(member => member.tripId === trip.id);
+  const tripMembers = localMembers.filter(member => member.tripId === trip.id);
+  const availableMembers = localMembers.filter(member => !member.tripId || member.tripId !== trip.id);
 
-  // Filtra i travellers in base al termine di ricerca (nome o cognome)
-  const filteredTravellers = tripMembers.filter(traveller =>
-    `${traveller.name} ${traveller.surname}`.toLowerCase().includes(search.toLowerCase())
-  );
+  const filteredTravellers = tripMembers
+    .filter(traveller =>
+      `${traveller.name} ${traveller.surname}`.toLowerCase().includes(search.toLowerCase())
+    )
+    .sort((a, b) => b.id - a.id);
+
+  const filteredAvailableMembers = availableMembers
+    .filter(m => {
+      const search = assignSearch.toLowerCase();
+      return (
+        `${m.name} ${m.surname}`.toLowerCase().includes(search) ||
+        m.CF.toLowerCase().includes(search)
+      );
+    })
+    .sort((a, b) => b.id - a.id);
+
+  const handleAssignMember = (e) => {
+    e.preventDefault();
+    if (!selectedMemberId) return;
+    setLocalMembers(prevMembers => {
+      const updatedMember = prevMembers.find(m => m.id === Number(selectedMemberId));
+      if (!updatedMember) return prevMembers;
+      const newMember = { ...updatedMember, tripId: trip.id };
+      const others = prevMembers.filter(m => m.id !== Number(selectedMemberId));
+      others.unshift(newMember);
+      return others;
+    });
+    setSelectedMemberId('');
+  };
 
   const tripHeader = (
     <div className='bg-warning-subtle p-4 rounded'>
@@ -95,6 +124,43 @@ export default function JourneyDetail() {
       {trip ? (
         <>
           {tripHeader}
+          <form className='my-4 p-3 bg-warning-subtle rounded shadow' onSubmit={handleAssignMember} autoComplete='off'>
+            <h4 className='mb-3'>Aggiungi membro</h4>
+            <div className='d-flex flex-wrap align-items-start gap-2 mb-2 position-relative'>
+              <div className='flex-grow-1 position-relative' style={{ minWidth: 250 }}>
+                <input
+                  type='text'
+                  className='form-control mb-0'
+                  placeholder='Cerca per nome o cognome...'
+                  value={assignSearch}
+                  onChange={e => {
+                    setAssignSearch(e.target.value);
+                    setSelectedMemberId('');
+                  }}
+                  autoComplete='off'
+                />
+                {assignSearch && filteredAvailableMembers.length > 0 && !selectedMemberId && (
+                  <ul className='list-group position-absolute w-100' style={{ zIndex: 1, maxHeight: 200, overflowY: 'auto' }}>
+                    {filteredAvailableMembers.map(m => (
+                      <li
+                        key={m.id}
+                        className='list-group-item list-group-item-action'
+                        style={{ cursor: 'pointer' }}
+                        onClick={() => {
+                          setSelectedMemberId(m.id.toString());
+                          setAssignSearch(`${m.name} ${m.surname}`);
+                        }}
+                      >
+                        {m.name} {m.surname} - {m.CF}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                <input type='hidden' value={selectedMemberId} readOnly />
+              </div>
+              <button type='submit' className='btn btn-warning' style={{ height: 40 }} disabled={!selectedMemberId}>Aggiungi</button>
+            </div>
+          </form>
           <InstantSearchInput value={search} onChange={setSearch} title='Viaggiatori' placeholder='Cerca viaggiatore' />
           {travellersList}
         </>

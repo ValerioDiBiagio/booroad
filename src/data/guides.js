@@ -52,5 +52,59 @@ export default [
     email: 'luca.gialli@guideexample.com',
     phone: '+39 338 678 9012',
     CF: 'GLLLCU79T05H501P'
-  }
+  },
+  {
+    id: 7,
+    name: 'Giulia',
+    surname: 'Conti',
+    birthday: '1995-09-01',
+    email: 'giulia.conti@guideexample.com',
+    phone: '+39 345 345 6789',
+    CF: 'CNTGLI95P41H501Y'
+  },
+  {
+    id: 8,
+    name: 'Simone',
+    surname: 'Moretti',
+    birthday: '1983-04-20',
+    email: 'simone.moretti@guideexample.com',
+    phone: '+39 346 456 7890',
+    CF: 'MRTSMN83D20H501Z'
+  },
+  {
+    id: 9,
+    name: 'Chiara',
+    surname: 'Greco',
+    birthday: '1990-07-11',
+    email: 'chiara.greco@guideexample.com',
+    phone: '+39 347 567 8901',
+    CF: 'GRCCHR90L51H501X'
+  },
+  {
+    id: 10,
+    name: 'Davide',
+    surname: 'Rizzo',
+    birthday: '1977-02-05',
+    email: 'davide.rizzo@guideexample.com',
+    phone: '+39 348 678 9012',
+    CF: 'RZZDVD77B05H501W'
+  },
+  {
+    id: 11,
+    name: 'Federica',
+    surname: 'Mancini',
+    birthday: '1989-11-29',
+    email: 'federica.mancini@guideexample.com',
+    phone: '+39 349 789 0123',
+    CF: 'MNCFDR89S69H501V'
+  },
+  {
+    id: 12,
+    name: 'Andrea',
+    surname: 'Costanzo',
+    birthday: '1981-06-08',
+    email: 'andrea.costanzo@guideexample.com',
+    phone: '+39 350 890 1234',
+    CF: 'CSTNDR81H08H501U'
+  }  
 ]

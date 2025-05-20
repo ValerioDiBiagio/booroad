@@ -5,7 +5,7 @@ body {
 
 .jumbotron {
     background-image: url(../src/public/booroad_bg.jpg);
-    height: 20vh;
+    height: 22.5vh;
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: .5rem;

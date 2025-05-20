@@ -12,27 +12,27 @@ import Guides from './pages/Guides';
 
 export default function App() {
 
-    const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-    return (
-        <GlobalContext.Provider value={{
-            isLoading,
-            setIsLoading
-        }}>
-            <BrowserRouter>
-                <Routes>
-                    <Route element={<DefaultLayout />}>
-                        <Route path='/' element={<Homepage />} />
-                        <Route path='/journeys' element={<Homepage />} />
-                        <Route path='/journeys/:id' element={<JourneyDetail />} />
-                        <Route path='/members' element={<JourneyMembers />} />
-                        <Route path='/members/:id' element={<JourneyMemberDetails />} />
-                        <Route path='/guides' element={<Guides />} />
-                        <Route path='/guides/:id' element={<JourneyGuideDetails />} />
-                    </Route>
-                    <Route path='*' element={<Error />} />
-                </Routes>
-            </BrowserRouter>
-        </GlobalContext.Provider>
-    )
+  return (
+    <GlobalContext.Provider value={{
+      isLoading,
+      setIsLoading
+    }}>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<DefaultLayout />}>
+            <Route path='/' element={<Homepage />} />
+            <Route path='/journeys' element={<Homepage />} />
+            <Route path='/journeys/:id' element={<JourneyDetail />} />
+            <Route path='/members' element={<JourneyMembers />} />
+            <Route path='/members/:id' element={<JourneyMemberDetails />} />
+            <Route path='/guides' element={<Guides />} />
+            <Route path='/guides/:id' element={<JourneyGuideDetails />} />
+          </Route>
+          <Route path='*' element={<Error />} />
+        </Routes>
+      </BrowserRouter>
+    </GlobalContext.Provider>
+  )
 };

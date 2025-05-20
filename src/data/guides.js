@@ -6,7 +6,8 @@ export default [
     birthday: '1980-03-15',
     email: 'luca.bianchi@guideexample.com',
     phone: '+39 333 123 4567',
-    CF: 'BNCLCU80C15H501Y'
+    CF: 'BNCLCU80C15H501Y',
+    tripId: 1
   },
   {
     id: 2,
@@ -15,7 +16,8 @@ export default [
     birthday: '1978-11-22',
     email: 'anna.neri@guideexample.com',
     phone: '+39 334 234 5678',
-    CF: 'NRNANN78S62H501Z'
+    CF: 'NRNANN78S62H501Z',
+    tripId: 2
   },
   {
     id: 3,
@@ -24,7 +26,8 @@ export default [
     birthday: '1982-07-09',
     email: 'maria.rossi@guideexample.com',
     phone: '+39 335 345 6789',
-    CF: 'RSSMRA82L49H501X'
+    CF: 'RSSMRA82L49H501X',
+    tripId: 3
   },
   {
     id: 4,
@@ -33,7 +36,8 @@ export default [
     birthday: '1975-09-30',
     email: 'giovanni.verdi@guideexample.com',
     phone: '+39 336 456 7890',
-    CF: 'VRDGVN75P30H501W'
+    CF: 'VRDGVN75P30H501W',
+    tripId: 4
   },
   {
     id: 5,
@@ -42,7 +46,8 @@ export default [
     birthday: '1985-05-18',
     email: 'sara.bianchi@guideexample.com',
     phone: '+39 337 567 8901',
-    CF: 'BNCSRA85E58H501V'
+    CF: 'BNCSRA85E58H501V',
+    tripId: 5
   },
   {
     id: 6,
@@ -51,7 +56,8 @@ export default [
     birthday: '1979-12-05',
     email: 'luca.gialli@guideexample.com',
     phone: '+39 338 678 9012',
-    CF: 'GLLLCU79T05H501P'
+    CF: 'GLLLCU79T05H501P',
+    tripId: 6
   },
   {
     id: 7,
@@ -60,7 +66,8 @@ export default [
     birthday: '1995-09-01',
     email: 'giulia.conti@guideexample.com',
     phone: '+39 345 345 6789',
-    CF: 'CNTGLI95P41H501Y'
+    CF: 'CNTGLI95P41H501Y',
+    tripId: 7
   },
   {
     id: 8,
@@ -69,7 +76,8 @@ export default [
     birthday: '1983-04-20',
     email: 'simone.moretti@guideexample.com',
     phone: '+39 346 456 7890',
-    CF: 'MRTSMN83D20H501Z'
+    CF: 'MRTSMN83D20H501Z',
+    tripId: 8
   },
   {
     id: 9,
@@ -78,7 +86,8 @@ export default [
     birthday: '1990-07-11',
     email: 'chiara.greco@guideexample.com',
     phone: '+39 347 567 8901',
-    CF: 'GRCCHR90L51H501X'
+    CF: 'GRCCHR90L51H501X',
+    tripId: 9
   },
   {
     id: 10,
@@ -87,7 +96,8 @@ export default [
     birthday: '1977-02-05',
     email: 'davide.rizzo@guideexample.com',
     phone: '+39 348 678 9012',
-    CF: 'RZZDVD77B05H501W'
+    CF: 'RZZDVD77B05H501W',
+    tripId: 10
   },
   {
     id: 11,
@@ -96,7 +106,8 @@ export default [
     birthday: '1989-11-29',
     email: 'federica.mancini@guideexample.com',
     phone: '+39 349 789 0123',
-    CF: 'MNCFDR89S69H501V'
+    CF: 'MNCFDR89S69H501V',
+    tripId: 11
   },
   {
     id: 12,
@@ -105,6 +116,7 @@ export default [
     birthday: '1981-06-08',
     email: 'andrea.costanzo@guideexample.com',
     phone: '+39 350 890 1234',
-    CF: 'CSTNDR81H08H501U'
-  }  
+    CF: 'CSTNDR81H08H501U',
+    tripId: 12
+  }
 ]

@@ -24,3 +24,11 @@ body{
         -1.5px  1.5px 0 #000,
          1.5px  1.5px 0 #000;
 }
+
+.layout {
+    max-width: 960px;
+}
+
+ .header-layout{
+    max-width: 960px;
+ }

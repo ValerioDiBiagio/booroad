@@ -25,7 +25,7 @@ export default function Guides() {
             <div className='card-header'>
               <h5 className='p-2'> <i className='fa-regular fa-user'></i> {guide.name} {guide.surname}</h5>
             </div>
-            <div className='card-body bg-warning-subtle'>
+            <div className='card-body bg-warning-subtle rounded'>
               <p className='card-text'> <i className='fa-solid fa-envelope'></i> <strong>Email: </strong>{guide.email} </p>
               <p className='card-text'> <i className='fa-solid fa-phone'></i> <strong>Numero di Telefono: </strong>{guide.phone} </p>
               <p className='card-text'> <i className='fa-solid fa-id-card'></i> <strong>Codice Fiscale: </strong>{guide.CF} </p>

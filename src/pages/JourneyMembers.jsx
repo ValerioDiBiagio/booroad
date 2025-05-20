@@ -11,7 +11,7 @@ export default function JourneyMembers() {
   const filteredMembers = members.filter(member =>
     `${member.name} ${member.surname}`.toLowerCase().includes(search.toLowerCase())
   );
-  const itemsPerPage = 10;
+  const itemsPerPage = 9;
   const totalPages = Math.ceil(filteredMembers.length / itemsPerPage);
   const paginatedMembers = filteredMembers.slice((page - 1) * itemsPerPage, page * itemsPerPage);
 
@@ -20,13 +20,17 @@ export default function JourneyMembers() {
   return (
     <>
       <InstantSearchInput value={search} onChange={setSearch} placeholder='Cerca viaggiatore' />
-      {paginatedMembers.length ? (
-        paginatedMembers.map((member) => (
-          <MemberCard key={member.id} member={member} showTrip={true} />
-        ))
-      ) : (
-        <div>members were not found</div>
-      )}
+      <div className="row">
+        {paginatedMembers.length ? (
+          paginatedMembers.map((member) => (
+            <div className="col-12 col-md-6 col-lg-4 d-flex" key={member.id}>
+              <MemberCard member={member} showTrip={true} />
+            </div>
+          ))
+        ) : (
+          <div>members were not found</div>
+        )}
+      </div>
       <Pagination currentPage={page} totalPages={totalPages} onPageChange={setPage} />
     </>
   );

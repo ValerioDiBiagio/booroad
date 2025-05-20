@@ -11,7 +11,7 @@ const DefaultLayout = () => {
     return (
         <>
             <Header />
-            <main className='container'>
+            <main className='container layout'>
                 <Outlet />
             </main>
             {isLoading && <Loader />}

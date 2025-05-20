@@ -31,7 +31,7 @@ Apri vscode nella cartella selezionata da terminale
 code .
 ```
 
-- aprire ora il terminale in vscode ed eseguire i seguenti comandi:
+Ora apri il terminale in vscode ed eseguire i seguenti comandi:
 
 Installa le librerie necessarie al corretto funzionamento del programma
 ```bash

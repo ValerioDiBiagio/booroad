@@ -32,7 +32,7 @@ export default function JourneyDetail() {
       <h2 className='mt-3 p-0'><strong> Viaggiatori: </strong></h2>
       <input
         type='search'
-        className='form-control w-25 me-2'
+        className='form-control w-25 pe-4'
         placeholder='Cerca viaggiatore'
         value={search}
         onChange={e => setSearch(e.target.value)}

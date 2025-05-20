@@ -24,7 +24,7 @@ Booroad è una web-app progettata per esplorare nuove destinazioni, creare itine
 
 Sposta il terminale nella cartella desiderata
 ```bash
-cd ./'booroad'
+cd ./booroad
 ```
 Apri vscode nella cartella selezionata da terminale
 ```bash
@@ -35,11 +35,11 @@ Ora apri il terminale in vscode ed eseguire i seguenti comandi:
 
 Installa le librerie necessarie al corretto funzionamento del programma
 ```bash
-    npm i 
+npm i 
 ```
 Avvia il server locale
 ```bash
-    npm run dev
+npm run dev
 ```
 Aprire il link creato tramite 'Ctrl + click sinistro' (apre il programma nel browser) 
 

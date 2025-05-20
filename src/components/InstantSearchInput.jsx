@@ -3,7 +3,7 @@ export default function InstantSearchInput({ value, onChange, title, placeholder
     <h2 className='mt-3 p-0'><strong> {title}: </strong></h2>
     <input
       type='search'
-      className='form-control w-25 me-2'
+      className='form-control w-25'
       placeholder={placeholder}
       value={value}
       onChange={e => onChange(e.target.value)}

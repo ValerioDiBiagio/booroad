@@ -8,7 +8,7 @@ export default function JourneyMemberDetails() {
 
   return (
     <>
-      <MemberCard member={member} />
+      <MemberCard member={member} showTrip={false} />
     </>
   )
 };
